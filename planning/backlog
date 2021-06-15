@@ -17,7 +17,7 @@ This is a collection of user stories.
 - [ ] As a user I want to be able to share my list with another people, so that I can agree this one with my partner or children. 
 - [ ] As a user I want to be able to split my items as important and not so important.
 
-## Could Have:
+## Could Have
 <!--- these user stories would be really cool ... if there's time  -->
 - [ ] As I user I want to be able to hover the button `remove` and this button will change the color to `red`.
 - [ ] As I user I want to be able to hover the button `add` and this button will change the color to `green`.

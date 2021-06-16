@@ -119,7 +119,7 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 1. _handlers_
 
-   - Create a handler that prompt the user to andd the modification, the new data inputted by the user will modify de data stored, the handler will be stored in handlerEditItemList.js
+   - Create a handler that prompt the user to add the modification, the new data inputted by the user will modify de data stored, the handler will be stored in handlerEditItemList.js
   
 2. _listener_
 

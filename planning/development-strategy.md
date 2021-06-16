@@ -1,4 +1,4 @@
-# Custom video player
+# Grocery-list
 
 Creating a full website to support _Grocery-list_ activity, working as a team with Git and GitHub, during the last week of Separation-of-Concern module in HYF Belgium program.
 

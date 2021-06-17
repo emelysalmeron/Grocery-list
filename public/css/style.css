@@ -5,10 +5,11 @@
 #content {
   position: relative;
 }
+
 #content img {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   resize: 50%;
 }
 

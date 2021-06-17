@@ -1,0 +1,85 @@
+/*
+*
+* ==========================================
+* ==========================================
+*
+*/
+
+.warning {
+  color: red;
+}
+
+body {
+  min-height: 50vh;
+  background-color: #e2f7ed;
+  background-image: linear-gradient(to right, #f3f7f5 0%, #bdddd7 100%);
+  font-style: "Courier New";
+}
+
+.title {
+  text-align: center;
+  color: #235e81;
+}
+
+.container {
+  text-align: center;
+  list-style: none;
+}
+
+.form {
+  text-align: center;
+  list-style: none;
+}
+
+.main-navigation {
+  border-top: 4px solid #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 100px;
+}
+
+/** Social Button CSS **/
+
+.share-buttons {
+  text-align: center;
+}
+
+.share-btns {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-btn {
+  display: inline-block;
+  color: #fff;
+  border: none;
+  padding: 0.1em 0.6em;
+  outline: none;
+  text-align: center;
+  font-size: 0.95em;
+  margin: 0 0.45em;
+}
+
+.share-btn:focus,
+.share-btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.share-btn:active {
+  color: #e2e2e2;
+}
+
+.share-btn.twitter {
+  background: #55acee;
+}
+
+.share-btn.facebook {
+  background: #3b5998;
+}
+
+.share-btn.email {
+  background: #f8552d;
+}

@@ -36,8 +36,8 @@ How many hours does everyone have? and when are you generally available?
 | Tuesday | 7h-11h – after 20h30 | all day | all day | 9h-12h – 16h-18h |
 | Wednesday | 7h-11h – after 20h30  | 7h-11h – 14h-16h | all day |9h-11h – 14h-18h |
 | Thursday | 7h-11h – after 20h30  | 8h-15h | all day | 9h-10h – 16h-18h | 
-| Friday | 7h-11h – after 20h30 | after 21h | after 19h | 9h-12h – 16h-18h | 
-| Saturday |  | all day | before 13h |  | 
+| Friday | 7h-11h – after 20h30 | after 21h | before 19h | 9h-12h – 16h-18h | 
+| Saturday |  | all day | after 13h |  | 
 
 
 Emely: 5 to 6 hours per day <br>

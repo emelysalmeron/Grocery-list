@@ -2,14 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title></title>
-
-    <link href="./public/style.css" rel="stylesheet" />
+    <title>Grocery list</title>
+    <link href="./public/css/style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div id="root"></div>
-
+    <header><h1 class="title">Grocery list</h1>
+      <hr main-navigation>   
+      <div id="content">
+        <img src="./public/grocery-icon.png" id="grocery-icon"/>
+    </div> 
+    </header>
+    <div id="root"  class="container">
+    <form id = "input-form">
+      <input name="text" placeholder="write here" />
+      <input type="button" value="add" />
+      <input type="button" value="remove" />
+    </form>
+    <br />
+      <code id="warnings" class="warning"></code>
+      <br />
+      <label for=".sort">Sort list by:</label>
+      <select id="sort-type" class="sort">
+        <option value="a">Alphabetical</option>
+        <option value="completed">Completed tasks</option>
+        <option value="uncompleted">Uncompleted tasks</option>
+      </select>
+      <div id="list-container"></div>
+    </div>
+ 
+    <div class="list" style="display: block;">
+      <form>
+        <input type="checkbox" id="checkbox1" name="" value="" />
+        <label for="checkbox1"> </label><br />
+        <input type="checkbox" id="checkbox2" name="" value="" />
+        <label for="checkbox2"> </label><br />
+        <input type="checkbox" id="checkbox3" name="" value="" />
+        <label for="checkbox3"></label><br /><br />
+      </form>
+    </div>
     <script type="module" src="./src/init/index.js"></script>
   </body>
+  <footer>
+    <!-- Basic Share Links -->
+<h2 class="share-title">Share via:</h1>
+  <div class="share-btns">
+    <a
+      class="share-social-btn twitter"
+      href="https://twitter.com/share?url=<URL>&text=<TITLE>&via=GregorySchier"
+      target="_blank"
+    >Twitter</a>
+  
+    <a
+      class="share-social-btn facebook"
+      href="https://www.facebook.com/sharer/sharer.php?u=<URL>"
+      target="_blank"
+    >Facebook</a>
+  
+    <a
+      class="share-social-btn email"
+      href="mailto:?subject=<TITLE>&body=<URL>"
+      target="_blank"
+    >Email</a>
+    </div>
+  </footer>
 </html>

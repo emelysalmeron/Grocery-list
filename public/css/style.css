@@ -1,0 +1,102 @@
+.warning {
+  color: red;
+}
+
+#content {
+  position: relative;
+}
+
+#content img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  resize: 50%;
+}
+
+#grocery-icon {
+  max-width: 15%;
+}
+
+.body {
+  min-height: 50vh;
+  background-color: #e2f7ed;
+  background-image: linear-gradient(to right, #f3f7f5 0%, #bdddd7 100%);
+  font-style: "Courier New";
+}
+
+.title {
+  text-align: center;
+  color: #235e81;
+}
+
+.container {
+  text-align: center;
+  list-style: none;
+}
+
+.form {
+  text-align: center;
+  list-style: none;
+}
+
+.main-navigation {
+  border-top: 4px solid #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 100px;
+}
+
+/** Social Button CSS **/
+
+.share-title {
+  text-align: center;
+}
+
+.share-btns {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-social-btn {
+  display: inline-block;
+  color: #fff;
+  border: none;
+  padding: 0.1em 0.6em;
+  outline: none;
+  text-align: center;
+  font-size: 0.95em;
+  margin: 0 0.45em;
+}
+
+.list {
+  background: #bdddd7;
+  padding: 40px 40px;
+  max-width: 30%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+}
+
+.share-social-btn:focus,
+.share-social-btn:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.share-social-btn:active {
+  color: #e2e2e2;
+}
+
+.share-social-btn.twitter {
+  background: #55acee;
+}
+
+.share-social-btn.facebook {
+  background: #3b5998;
+}
+
+.share-social-btn.email {
+  background: #f8592d;
+}

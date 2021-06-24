@@ -12,10 +12,3 @@ export const newItemListComponent = (userInput) => {
   const nodes = { input, label, br };
   return nodes;
 };
-
-export const listFormComponent = () => {
-  const listForm = document.createElement("form");
-  listForm.id = "listForm";
-  listForm.classList.add("list");
-  return listForm;
-};

@@ -12,10 +12,15 @@
 
 <!-- BEGIN TOC -->
 
+- components
+  - [listFormComponent.js](#srccomponentslistFormComponentjs)
+  - [newItemListComponent.js](#srccomponentsnewItemListComponentjs)
 - handlers
+  - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
 - init
   - [index.js](#srcinitindexjs)
 - listeners
+  - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
 - logic
 - procedures
 - [data.js](#srcdatajs)
@@ -26,7 +31,27 @@
 
 ---
 
+# /components
+
+<details><summary><a href="../src/components/listFormComponent.js" id="srccomponentslistFormComponentjs">src/components/listFormComponent.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/components/newItemListComponent.js" id="srccomponentsnewItemListComponentjs">src/components/newItemListComponent.js</a></summary>
+
+</details>
+
+---
+
+[TOP](#DOCS)
+
+---
+
 # /handlers
+
+<details><summary><a href="../src/handlers/handlerNewItemList.js" id="srchandlershandlerNewItemListjs">src/handlers/handlerNewItemList.js</a></summary>
+
+</details>
 
 ---
 
@@ -47,6 +72,10 @@
 ---
 
 # /listeners
+
+<details><summary><a href="../src/listeners/listenerAddButton.js" id="srclistenerslistenerAddButtonjs">src/listeners/listenerAddButton.js</a></summary>
+
+</details>
 
 ---
 

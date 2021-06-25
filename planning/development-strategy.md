@@ -37,7 +37,12 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > JavaScript
 
-- An array named `itemsList` to get the data inputted by the user, will be stored `data.js` file.
+1. _components_
+
+   - Create a container that renders the list items once the user click the add button
+
+2. _data_
+   - An object named `state` to get the property data inputted by the user, will be stored `data.js` file.
 
 ## 2. Add a new item to the list
 
@@ -50,25 +55,27 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > HTML
 
-- Will be rendered in javascript procedure.
+- Will be rendered in javascript handlers using components.
 
 > CSS
 
-- will be rendered in javascript procedure.
+- will be rendered in javascript handlers using components.
 
 > JavaScript
 
-1. _Procedure_
+1. _data_
+   - An array named `itemsList` to get the data text inputted by the user, will be stored in `state object` file.
 
-   - Create, a procedure function that renders html and css code once the add button is clicked stored in `newItemList.js`
+2. _Components_
 
-2. _handlers_
+   - Create, a component function that renders html and css code once the add button is clicked, this function is going to be stored in `newItemListComponent.js`
 
-   - Create a handler that store the data inputted by the user and call the procedure to add the new user input in the list the handler will be stored in handlerNewItemList.js
+3. _handlers_
+
+   - Create a handler that store the data inputted by the user and call the component to add the new user input in the list the handler will be stored in handlerNewItemList.js
   
-3. _listener_
+4. _listener_
 
-   - Attach a `keyUp` event to the `input tag`.
    - Attach a `click` event to the `add button`.
 
 ## 3. Remove any item from the list
@@ -90,13 +97,16 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > JavaScript
 
-1. _handlers_
+1. _data_
+   - An array named `removedItems` to get the data text removed by the user, will be stored in `state object` in data.js file.
+
+2. _handlers_
 
    - Create a handler that remove the data inputted by the user and remove  user input in the list, the handler will be stored in handlerRemoveItemList.js
   
-2. _listener_
+3. _listener_
 
-   - Attach a `click` event to the `remove button`.
+   - Attach a `click` event to the `remove`  button.
 
 ## 4. Edit the description of each item in their list
 
@@ -109,21 +119,24 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > HTML
 
-- Will be rendered in javascript handlers.
+- Create a button component that will be rendered in javascript handler using components
 
 > CSS
 
-- will be rendered in javascript handlers.
+- will be rendered in javascript handler using components.
 
 > JavaScript
 
-1. _handlers_
+1. _data_
+   - An array named `itemsModified` to get the data text modified by the user, will be stored in `state object` file.
 
-   - Create a handler that prompt the user to add the modification, the new data inputted by the user will modify de data stored, the handler will be stored in handlerEditItemList.js
+2. _handlers_
+
+   - Create a handler that target the object to be modified, the new data inputted by the user will update de data stored in our state, the handler will be stored in handlerEditItemList.js
   
-2. _listener_
+3. _listener_
 
-- Attach a `click` event to the `list input`.
+- Attach a `click` event to the `modify button`.
 
 ## 5. Mark an item as "done" or "not done"
 
@@ -136,19 +149,22 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > HTML
 
-- Will be rendered in javascript handler.
+- Will be rendered in javascript handler using components.
 
 > CSS
 
-- will be rendered in javascript handler.
+- will be rendered in javascript handler using components.
 
 > JavaScript
 
-1. _handlers_
+1. _data_
+   - An array named `itemsDone` to get the data text selected as done by the user, will be stored in `state object` file.
 
-   - Create a handler that toggle the checklist, the handler will be stored in handlerToggleItemList.js
+2. _handlers_
+
+   - Create a handler renders container component that is going to store the moved items, the handler will be stored in handlerToggleItemList.js
   
-2. _listener_
+3. _listener_
 
 - Attach a `click` event to the `checklist`.
 
@@ -163,17 +179,17 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
 
 > HTML
 
-- Will be rendered in javascript handler.
+- Will be rendered in javascript handler using components.
 
 > CSS
 
-- will be rendered in javascript handler.
+- will be rendered in javascript handler using components.
 
 > JavaScript
 
 1. _data_
 
-   - Create array to store the object data from the user, the variable will be stored in `data.js`
+   - Create array to store the object data from the user, the variable will be stored in the `state object` stored in `data.js`
 
 2. _handlers_
 
@@ -183,4 +199,5 @@ Creating a full website to support _Grocery-list_ activity, working as a team wi
   
 3. _listener_
 
-- Attach a `click` event to the `checklist`.
+- Attach a `click` event to the `register button`.
+- Attach a `click` event to the `logging, logout button`.

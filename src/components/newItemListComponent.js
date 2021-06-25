@@ -1,14 +1,13 @@
-export const newItemListComponent = (userInput) => {
-  // create checkbox for input
+export const newItemListComponent = (objToAppend, userInput) => {
   const input = document.createElement("input");
   input.type = "checkbox";
-  input.id = "checkbox1";
+  input.className = "checkbox1";
   input.name = "";
-  // to show the text from input we create a label
   const label = document.createElement("label");
-  label.htmlFor = "checkbox1";
-  label.innerHTML = userInput;
+  label.htmlFor = ".checkbox1";
+  label.innerHTML = userInput[userInput.length - 1];
   const br = document.createElement("br");
-  const nodes = { input, label, br };
-  return nodes;
+  objToAppend.append(input);
+  objToAppend.append(label);
+  objToAppend.append(br);
 };

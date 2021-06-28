@@ -11,8 +11,7 @@ export const handlerNewItemList = (event) => {
     const userInputValue = userInput.value;
 
     if (!userInputValue) {
-      if (inputForm.childElementCount > 3) return;
-      const message = errorMessage("Please enter some text to remove");
+      const message = errorMessage("Please enter some text to add");
       inputForm.appendChild(message);
       setTimeout(() => inputForm.lastElementChild.remove(), 1500);
       return;
@@ -20,22 +19,45 @@ export const handlerNewItemList = (event) => {
 
     // Checks if user repeat the item in the list;
     const { itemList } = state;
-    if (itemList.includes(userInputValue.toLowerCase())) {
-      const message = errorMessage("Is already in the list");
-      inputForm.appendChild(message);
-      setTimeout(() => inputForm.lastElementChild.remove(), 1500);
-      return;
+    for (const element of itemList) {
+      if (element.userInput === userInputValue) {
+        const message = errorMessage("Is already in the list");
+        inputForm.appendChild(message);
+        setTimeout(() => {
+          inputForm.lastElementChild.remove();
+          userInput.value = "";
+        }, 1500);
+        return;
+      }
     }
-    // update the state
-    itemList.push(userInputValue.toLowerCase());
+    // add user input data to the state
+    itemList.push({ userInput: userInputValue.toLowerCase(), doneItem: false });
 
     const rootContainer = document.getElementById("root");
     if (!document.getElementById("listRoot")) {
-      rootContainer.after(divFormComponent("listRoot", "list"));
+      rootContainer.after(divFormComponent("listRoot", "list", "event"));
     }
     const listRoot = document.getElementById("listRoot");
-    newItemListComponent(listRoot, itemList);
-    userInput.value = "";
+    for (const element of itemList) {
+      if (element.userInput === userInputValue) {
+        newItemListComponent(listRoot, element);
+      }
+    }
+
+    // update the state
+    const checkBox = document.querySelectorAll(".checkbox1");
+    for (const element of checkBox) {
+      if (
+        element.nextElementSibling.innerHTML ===
+          itemList[itemList.length - 1].userInput &&
+        itemList[itemList.length - 1].doneItem === false
+      ) {
+        itemList[itemList.length - 1].userInput =
+          element.nextElementSibling.innerHTML;
+        itemList[itemList.length - 1].userCheck = element.checked;
+        userInput.value = "";
+      }
+    }
   }
   console.log(state);
 };

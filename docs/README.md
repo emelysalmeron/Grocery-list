@@ -13,14 +13,18 @@
 <!-- BEGIN TOC -->
 
 - components
-
   - [divFormComponent.js](#srccomponentsdivFormComponentjs)
   - [errorMessage.js](#srccomponentserrorMessagejs)
+  - [newButtonComponent.js](#srccomponentsnewButtonComponentjs)
   - [newItemListComponent.js](#srccomponentsnewItemListComponentjs)
 - handlers
+  - [handlerDoneItem.js](#srchandlershandlerDoneItemjs)
   - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
 - init
   - [index.js](#srcinitindexjs)
+- lib
+  - [ajv7.bundle.js](#srclibajv7bundlejs)
+  - [validate.js](#srclibvalidatejs)
 - listeners
   - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
 - logic
@@ -43,6 +47,10 @@
 
 </details>
 
+<details><summary><a href="../src/components/newButtonComponent.js" id="srccomponentsnewButtonComponentjs">src/components/newButtonComponent.js</a></summary>
+
+</details>
+
 <details><summary><a href="../src/components/newItemListComponent.js" id="srccomponentsnewItemListComponentjs">src/components/newItemListComponent.js</a></summary>
 
 </details>
@@ -54,6 +62,10 @@
 ---
 
 # /handlers
+
+<details><summary><a href="../src/handlers/handlerDoneItem.js" id="srchandlershandlerDoneItemjs">src/handlers/handlerDoneItem.js</a></summary>
+
+</details>
 
 <details><summary><a href="../src/handlers/handlerNewItemList.js" id="srchandlershandlerNewItemListjs">src/handlers/handlerNewItemList.js</a></summary>
 
@@ -68,6 +80,22 @@
 # /init
 
 <details><summary><a href="../src/init/index.js" id="srcinitindexjs">src/init/index.js</a></summary>
+
+</details>
+
+---
+
+[TOP](#DOCS)
+
+---
+
+# /lib
+
+<details><summary><a href="../src/lib/ajv7.bundle.js" id="srclibajv7bundlejs">src/lib/ajv7.bundle.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/lib/validate.js" id="srclibvalidatejs">src/lib/validate.js</a></summary>
 
 </details>
 

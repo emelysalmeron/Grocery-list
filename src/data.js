@@ -9,7 +9,7 @@ const schema = {
       type: "array",
       description: "list of items to buy",
       items: {
-        type: "string",
+        type: "object",
       },
     },
   },

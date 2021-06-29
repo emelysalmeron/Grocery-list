@@ -60,7 +60,6 @@ const moveItemToContainer = (event) => {
             break;
           }
         }
-        handlerDoneItem();
         console.log(state.itemList);
       }
     }

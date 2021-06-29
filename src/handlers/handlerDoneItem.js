@@ -5,10 +5,10 @@ import { divFormComponent } from "../components/divFormComponent.js";
 import { newItemListComponent } from "../components/newItemListComponent.js";
 import { state } from "../data.js";
 
+const inputForm = document.getElementById("input-form");
+
 const handlerDoneItem = (event) => {
   const target = event?.target;
-  const inputForm = document.getElementById("input-form");
-  const doneButton = document.getElementById("addButton");
   if (target?.nodeName === "INPUT" && target?.type === "checkbox") {
     // update de check input
     for (const property of state.itemList) {
@@ -18,14 +18,9 @@ const handlerDoneItem = (event) => {
     }
     console.log(state.itemList);
     // if there is not button
-    if (!document.getElementById("addButton")) {
-      inputForm.appendChild(
-        newButtonComponent("done", "addButton", "click", "event")
-      );
+    if (!document.getElementById("doneButton")) {
+      inputForm.appendChild(newButtonComponent("done", "doneButton", "click", "event"));
     }
-  }
-  if (state.itemList.every((input) => input.userCheck === false)) {
-    inputForm?.removeChild(doneButton);
   }
 };
 
@@ -38,17 +33,14 @@ const moveItemToContainer = (event) => {
     for (const element of state.itemList) {
       if (element.userCheck === true) {
         if (!document.getElementById("doneList")) {
-          const formContainer = divFormComponent("doneList", "list");
+          const formContainer = divFormComponent("doneList", "list", "event");
           formContainer.style.backgroundColor = "green";
-
           listRoot.after(formContainer);
         }
         const form = document.getElementById("doneList0");
 
         for (const nodeElement of list) {
-          if (
-            nodeElement?.nextElementSibling?.innerHTML === element.userInput
-          ) {
+          if (nodeElement?.nextElementSibling?.innerHTML === element.userInput) {
             element.doneItem = true;
             element.userCheck = false;
             nodeElement.checked = element.userCheck;
@@ -63,6 +55,14 @@ const moveItemToContainer = (event) => {
         console.log(state.itemList);
       }
     }
+  }
+  if (state.itemList.every((input) => input.userCheck === false)) {
+    const doneButton = document.getElementById("doneButton");
+    const addButton = document.getElementById("addButton");
+    const input = document.getElementById("input");
+    addButton.value = "add";
+    input.placeholder = "write here";
+    inputForm?.removeChild(doneButton);
   }
 };
 

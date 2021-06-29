@@ -37,10 +37,10 @@ export const handlerNewItemList = (event) => {
     if (!document.getElementById("listRoot")) {
       rootContainer.after(divFormComponent("listRoot", "list", "event"));
     }
-    const listRoot = document.getElementById("listRoot");
+    const formRoot = document.getElementById("listRoot0");
     for (const element of itemList) {
       if (element.userInput === userInputValue) {
-        newItemListComponent(listRoot, element);
+        newItemListComponent(formRoot, element);
       }
     }
 
@@ -48,12 +48,10 @@ export const handlerNewItemList = (event) => {
     const checkBox = document.querySelectorAll(".checkbox1");
     for (const element of checkBox) {
       if (
-        element.nextElementSibling.innerHTML ===
-          itemList[itemList.length - 1].userInput &&
+        element.nextElementSibling.innerHTML === itemList[itemList.length - 1].userInput &&
         itemList[itemList.length - 1].doneItem === false
       ) {
-        itemList[itemList.length - 1].userInput =
-          element.nextElementSibling.innerHTML;
+        itemList[itemList.length - 1].userInput = element.nextElementSibling.innerHTML;
         itemList[itemList.length - 1].userCheck = element.checked;
         userInput.value = "";
       }

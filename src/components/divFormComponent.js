@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import { handlerDoneItem } from "../handlers/handlerDoneItem.js";
+import { handlerModifyItem } from "../handlers/handlerModItem.js";
 
 // eslint-disable-next-line prettier/prettier
 export const divFormComponent = (textId = "", textClass = "", addEvent = "") => {
@@ -12,6 +13,7 @@ export const divFormComponent = (textId = "", textClass = "", addEvent = "") => 
   div.append(form);
   if (addEvent === "event") {
     div.addEventListener("click", handlerDoneItem);
+    div.addEventListener("click", handlerModifyItem);
   }
   return div;
 };

@@ -20,6 +20,7 @@
 - handlers
   - [handlerDoneItem.js](#srchandlershandlerDoneItemjs)
   - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
+  - [handlerRemoveButton.js](#srchandlershandlerRemoveButtonjs)
 - init
   - [index.js](#srcinitindexjs)
 - lib
@@ -27,6 +28,7 @@
   - [validate.js](#srclibvalidatejs)
 - listeners
   - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
+  - [listenerRemoveButton.js](#srclistenerslistenerRemoveButtonjs)
 - logic
 - procedures
 - [data.js](#srcdatajs)
@@ -71,6 +73,10 @@
 
 </details>
 
+<details><summary><a href="../src/handlers/handlerRemoveButton.js" id="srchandlershandlerRemoveButtonjs">src/handlers/handlerRemoveButton.js</a></summary>
+
+</details>
+
 ---
 
 [TOP](#DOCS)
@@ -108,6 +114,10 @@
 # /listeners
 
 <details><summary><a href="../src/listeners/listenerAddButton.js" id="srclistenerslistenerAddButtonjs">src/listeners/listenerAddButton.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/listeners/listenerRemoveButton.js" id="srclistenerslistenerRemoveButtonjs">src/listeners/listenerRemoveButton.js</a></summary>
 
 </details>
 

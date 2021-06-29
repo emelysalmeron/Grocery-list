@@ -59,5 +59,4 @@ export const handlerNewItemList = (event) => {
       }
     }
   }
-  console.log(state);
 };

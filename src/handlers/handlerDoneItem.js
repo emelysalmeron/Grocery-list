@@ -6,8 +6,10 @@ import { newItemListComponent } from "../components/newItemListComponent.js";
 import { state } from "../data.js";
 
 const handlerDoneItem = (event) => {
-  const { target } = event;
-  if (target.nodeName === "INPUT") {
+  const target = event?.target;
+  const inputForm = document.getElementById("input-form");
+  const doneButton = document.getElementById("addButton");
+  if (target?.nodeName === "INPUT" && target?.type === "checkbox") {
     // update de check input
     for (const property of state.itemList) {
       if (property.userInput.includes(target.nextSibling.innerText)) {
@@ -15,17 +17,15 @@ const handlerDoneItem = (event) => {
       }
     }
     console.log(state.itemList);
-    const inputForm = document.getElementById("input-form");
-    const doneButton = document.getElementById("addButton");
     // if there is not button
     if (!document.getElementById("addButton")) {
       inputForm.appendChild(
         newButtonComponent("done", "addButton", "click", "event")
       );
     }
-    if (state.itemList.every((input) => input.userCheck === false)) {
-      inputForm.removeChild(doneButton);
-    }
+  }
+  if (state.itemList.every((input) => input.userCheck === false)) {
+    inputForm?.removeChild(doneButton);
   }
 };
 

@@ -19,6 +19,7 @@
   - [newItemListComponent.js](#srccomponentsnewItemListComponentjs)
 - handlers
   - [handlerDoneItem.js](#srchandlershandlerDoneItemjs)
+  - [handlerModItem.js](#srchandlershandlerModItemjs)
   - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
 - init
   - [index.js](#srcinitindexjs)
@@ -27,6 +28,7 @@
   - [validate.js](#srclibvalidatejs)
 - listeners
   - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
+  - [listenerModifuButton.js](#srclistenerslistenerModifuButtonjs)
 - logic
 - procedures
 - [data.js](#srcdatajs)
@@ -64,6 +66,10 @@
 # /handlers
 
 <details><summary><a href="../src/handlers/handlerDoneItem.js" id="srchandlershandlerDoneItemjs">src/handlers/handlerDoneItem.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/handlers/handlerModItem.js" id="srchandlershandlerModItemjs">src/handlers/handlerModItem.js</a></summary>
 
 </details>
 
@@ -108,6 +114,10 @@
 # /listeners
 
 <details><summary><a href="../src/listeners/listenerAddButton.js" id="srclistenerslistenerAddButtonjs">src/listeners/listenerAddButton.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/listeners/listenerModifuButton.js" id="srclistenerslistenerModifuButtonjs">src/listeners/listenerModifuButton.js</a></summary>
 
 </details>
 

@@ -12,12 +12,17 @@ const schema = {
         type: "object",
       },
     },
+    sort: {
+      type: "string",
+      description: "property to sorts items from newest to eldest",
+    },
   },
-  required: ["itemList"],
+  required: ["itemList", "sort"],
 };
 
 export const state = {
   itemList: [],
+  sort: "newest",
 };
 
 validate(schema, state);

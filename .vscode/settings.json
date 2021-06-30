@@ -5,6 +5,8 @@
         "depcruise",
         "graphviz",
         "odocs",
+        "parens",
         "stylelint"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

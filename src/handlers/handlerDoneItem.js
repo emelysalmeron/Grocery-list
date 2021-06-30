@@ -1,15 +1,11 @@
 // eslint-disable-next-line import/no-cycle
 import { newButtonComponent } from "../components/newButtonComponent.js";
-// eslint-disable-next-line import/no-cycle
-import { divFormComponent } from "../components/divFormComponent.js";
-import { newItemListComponent } from "../components/newItemListComponent.js";
 import { state } from "../data.js";
 
-const inputForm = document.getElementById("input-form");
-
-const handlerDoneItem = (event) => {
+export const handlerDoneItem = (event) => {
   const target = event?.target;
   if (target?.nodeName === "INPUT" && target?.type === "checkbox") {
+    const inputForm = document.getElementById("input-form");
     // update de check input
     for (const property of state.itemList) {
       if (property.userInput.includes(target.nextSibling.innerText)) {
@@ -19,51 +15,9 @@ const handlerDoneItem = (event) => {
     console.log(state.itemList);
     // if there is not button
     if (!document.getElementById("doneButton")) {
-      inputForm.appendChild(newButtonComponent("done", "doneButton", "click", "event"));
+      inputForm.appendChild(
+        newButtonComponent("done", "doneButton", "click", "event")
+      );
     }
   }
 };
-
-const moveItemToContainer = (event) => {
-  event.preventDefault();
-  const { target } = event;
-  if (target.nodeName === "BUTTON") {
-    const listRoot = document.getElementById("listRoot");
-    const list = document.querySelectorAll(".checkbox1");
-    for (const element of state.itemList) {
-      if (element.userCheck === true) {
-        if (!document.getElementById("doneList")) {
-          const formContainer = divFormComponent("doneList", "list", "event");
-          formContainer.style.backgroundColor = "green";
-          listRoot.after(formContainer);
-        }
-        const form = document.getElementById("doneList0");
-
-        for (const nodeElement of list) {
-          if (nodeElement?.nextElementSibling?.innerHTML === element.userInput) {
-            element.doneItem = true;
-            element.userCheck = false;
-            nodeElement.checked = element.userCheck;
-            nodeElement.className = "checkbox1";
-            nodeElement.nextElementSibling.nextElementSibling.remove();
-            nodeElement.nextElementSibling.remove();
-            nodeElement.remove();
-            newItemListComponent(form, element);
-            break;
-          }
-        }
-        console.log(state.itemList);
-      }
-    }
-  }
-  if (state.itemList.every((input) => input.userCheck === false)) {
-    const doneButton = document.getElementById("doneButton");
-    const addButton = document.getElementById("addButton");
-    const input = document.getElementById("input");
-    addButton.value = "add";
-    input.placeholder = "write here";
-    inputForm?.removeChild(doneButton);
-  }
-};
-
-export { handlerDoneItem, moveItemToContainer };

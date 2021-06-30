@@ -19,6 +19,7 @@
   - [newItemListComponent.js](#srccomponentsnewItemListComponentjs)
 - handlers
   - [handlerDoneItem.js](#srchandlershandlerDoneItemjs)
+  - [handlerModItem.js](#srchandlershandlerModItemjs)
   - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
   - [handlerRemoveButton.js](#srchandlershandlerRemoveButtonjs)
 - init
@@ -66,6 +67,10 @@
 # /handlers
 
 <details><summary><a href="../src/handlers/handlerDoneItem.js" id="srchandlershandlerDoneItemjs">src/handlers/handlerDoneItem.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/handlers/handlerModItem.js" id="srchandlershandlerModItemjs">src/handlers/handlerModItem.js</a></summary>
 
 </details>
 

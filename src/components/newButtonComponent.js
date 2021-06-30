@@ -1,6 +1,12 @@
-import { moveItemToContainer } from "../handlers/handlerDoneItem.js";
+// eslint-disable-next-line import/no-cycle
+import { moveItemToContainer } from "../handlers/handlerMoveItemContainer.js";
 
-export const newButtonComponent = (text = "", newId = "", newClass = "", addEvent = "") => {
+export const newButtonComponent = (
+  text = "",
+  newId = "",
+  newClass = "",
+  addEvent = ""
+) => {
   const button = document.createElement("button");
   button.innerHTML = text;
   button.id = newId;

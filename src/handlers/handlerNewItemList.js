@@ -2,6 +2,7 @@ import { state } from "../data.js";
 import { divFormComponent } from "../components/divFormComponent.js";
 import { newItemListComponent } from "../components/newItemListComponent.js";
 import { errorMessage } from "../components/errorMessage.js";
+import { h2title } from "../components/h2Component.js";
 
 export const handlerNewItemList = (event) => {
   const { target } = event; // const target = event.target;
@@ -36,11 +37,13 @@ export const handlerNewItemList = (event) => {
     const rootContainer = document.getElementById("root");
     if (!document.getElementById("listRoot")) {
       rootContainer.after(divFormComponent("listRoot", "list", "event"));
+      const listRoot = document.getElementById("listRoot");
+      listRoot.prepend(h2title("to do"));
     }
-    const listRoot = document.getElementById("listRoot");
+    const formRoot = document.getElementById("listRoot0");
     for (const element of itemList) {
       if (element.userInput === userInputValue) {
-        newItemListComponent(listRoot, element);
+        newItemListComponent(formRoot, element);
       }
     }
 

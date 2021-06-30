@@ -12,7 +12,7 @@ export const handlerDoneItem = (event) => {
         property.userCheck = target.checked;
       }
     }
-    console.log(state.itemList);
+    console.log("user check =>", state.itemList);
     // if there is not button
     if (!document.getElementById("doneButton")) {
       inputForm.appendChild(

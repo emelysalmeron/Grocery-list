@@ -26,7 +26,6 @@ export const handlerModifyItem = (event) => {
       setTimeout(() => inputForm.lastElementChild.remove(), 1500);
       return;
     }
-
     itemList.forEach((element) => {
       if (element.userCheck === true) {
         labelList.forEach((labelElement) => {
@@ -34,12 +33,16 @@ export const handlerModifyItem = (event) => {
             labelElement.innerHTML = input.value;
             // update the state
             element.userInput = labelElement.innerHTML;
-            const deselect = (labelElement.previousElementSibling.checked = false);
+            const deselect =
+              (labelElement.previousElementSibling.checked = false);
             element.userCheck = deselect;
             input.value = "";
+            console.log("Item modified => ", state);
           }
         });
-        if (itemList.every((elementCheck) => elementCheck.userCheck === false)) {
+        if (
+          itemList.every((elementCheck) => elementCheck.userCheck === false)
+        ) {
           addButton.value = "add";
           input.placeholder = "write here";
           inputForm.removeChild(doneButton);
@@ -47,5 +50,4 @@ export const handlerModifyItem = (event) => {
       }
     });
   }
-  console.log(state.itemList);
 };

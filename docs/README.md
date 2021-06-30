@@ -15,12 +15,15 @@
 - components
   - [divFormComponent.js](#srccomponentsdivFormComponentjs)
   - [errorMessage.js](#srccomponentserrorMessagejs)
+  - [h2Component.js](#srccomponentsh2Componentjs)
   - [newButtonComponent.js](#srccomponentsnewButtonComponentjs)
   - [newItemListComponent.js](#srccomponentsnewItemListComponentjs)
 - handlers
   - [handlerDoneItem.js](#srchandlershandlerDoneItemjs)
   - [handlerModItem.js](#srchandlershandlerModItemjs)
+  - [handlerMoveItemContainer.js](#srchandlershandlerMoveItemContainerjs)
   - [handlerNewItemList.js](#srchandlershandlerNewItemListjs)
+  - [handlerRemoveButton.js](#srchandlershandlerRemoveButtonjs)
 - init
   - [index.js](#srcinitindexjs)
 - lib
@@ -29,7 +32,9 @@
 - listeners
   - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
   - [listenerModifuButton.js](#srclistenerslistenerModifuButtonjs)
+  - [listenerRemoveButton.js](#srclistenerslistenerRemoveButtonjs)
 - logic
+  - [sortItems.js](#srclogicsortItemsjs)
 - procedures
 - [data.js](#srcdatajs)
 
@@ -46,6 +51,10 @@
 </details>
 
 <details><summary><a href="../src/components/errorMessage.js" id="srccomponentserrorMessagejs">src/components/errorMessage.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/components/h2Component.js" id="srccomponentsh2Componentjs">src/components/h2Component.js</a></summary>
 
 </details>
 
@@ -73,7 +82,15 @@
 
 </details>
 
+<details><summary><a href="../src/handlers/handlerMoveItemContainer.js" id="srchandlershandlerMoveItemContainerjs">src/handlers/handlerMoveItemContainer.js</a></summary>
+
+</details>
+
 <details><summary><a href="../src/handlers/handlerNewItemList.js" id="srchandlershandlerNewItemListjs">src/handlers/handlerNewItemList.js</a></summary>
+
+</details>
+
+<details><summary><a href="../src/handlers/handlerRemoveButton.js" id="srchandlershandlerRemoveButtonjs">src/handlers/handlerRemoveButton.js</a></summary>
 
 </details>
 
@@ -121,6 +138,10 @@
 
 </details>
 
+<details><summary><a href="../src/listeners/listenerRemoveButton.js" id="srclistenerslistenerRemoveButtonjs">src/listeners/listenerRemoveButton.js</a></summary>
+
+</details>
+
 ---
 
 [TOP](#DOCS)
@@ -128,6 +149,10 @@
 ---
 
 # /logic
+
+<details><summary><a href="../src/logic/sortItems.js" id="srclogicsortItemsjs">src/logic/sortItems.js</a></summary>
+
+</details>
 
 ---
 

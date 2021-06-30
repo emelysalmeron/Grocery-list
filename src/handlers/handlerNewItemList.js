@@ -38,7 +38,7 @@ export const handlerNewItemList = (event) => {
     if (!document.getElementById("listRoot")) {
       rootContainer.after(divFormComponent("listRoot", "list", "event"));
       const listRoot = document.getElementById("listRoot");
-      listRoot.prepend(h2title("to do"));
+      listRoot.prepend(h2title("to buy"));
     }
     const formRoot = document.getElementById("listRoot0");
     for (const element of itemList) {
@@ -59,6 +59,7 @@ export const handlerNewItemList = (event) => {
           element.nextElementSibling.innerHTML;
         itemList[itemList.length - 1].userCheck = element.checked;
         userInput.value = "";
+        console.log("new Item => ", state);
       }
     }
   }

@@ -31,7 +31,7 @@
   - [validate.js](#srclibvalidatejs)
 - listeners
   - [listenerAddButton.js](#srclistenerslistenerAddButtonjs)
-  - [listenerModifuButton.js](#srclistenerslistenerModifuButtonjs)
+  - [listenerModifyButton.js](#srclistenerslistenerModifyButtonjs)
   - [listenerRemoveButton.js](#srclistenerslistenerRemoveButtonjs)
 - logic
   - [sortItems.js](#srclogicsortItemsjs)
@@ -134,7 +134,7 @@
 
 </details>
 
-<details><summary><a href="../src/listeners/listenerModifuButton.js" id="srclistenerslistenerModifuButtonjs">src/listeners/listenerModifuButton.js</a></summary>
+<details><summary><a href="../src/listeners/listenerModifyButton.js" id="srclistenerslistenerModifyButtonjs">src/listeners/listenerModifyButton.js</a></summary>
 
 </details>
 

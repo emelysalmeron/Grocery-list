@@ -12,7 +12,8 @@ export const moveItemToContainer = (event) => {
   const inputForm = document.getElementById("input-form");
   const listRoot = document.getElementById("listRoot");
   const list = document.querySelectorAll(".checkbox1");
-  const form = document.getElementById("listRoot0");
+  const toBuyForm = document.getElementById("listRoot0");
+  const doneDiv = document.getElementById("doneList");
 
   if (target.nodeName === "BUTTON") {
     // Verify if the element is checked
@@ -26,7 +27,9 @@ export const moveItemToContainer = (event) => {
         }
         // Match dom element with state
         for (const nodeElement of list) {
-          if (nodeElement?.nextElementSibling?.innerHTML === element.userInput) {
+          if (
+            nodeElement?.nextElementSibling?.innerHTML === element.userInput
+          ) {
             // update state
             element.doneItem = true;
             element.userCheck = false;
@@ -36,23 +39,28 @@ export const moveItemToContainer = (event) => {
             nodeElement.remove();
             const doneForm = document.getElementById("doneList0");
             newItemListComponent(doneForm, element);
+            console.log("move to done =>", state);
             break;
           }
         }
-        console.log(state.itemList);
       }
     }
   }
   // Change doom elements
-  if (state.itemList.every((input) => input.userCheck === false)) {
-    const doneButton = document.getElementById("doneButton");
-    const addButton = document.getElementById("addButton");
-    const input = document.getElementById("input");
-    addButton.value = "add";
-    input.placeholder = "write here";
-    inputForm?.removeChild(doneButton);
-  }
-  if (form.children.length === 0) {
+  const doneForm = document.getElementById("doneList0");
+  if (toBuyForm?.children.length === 0) {
     listRoot.remove();
+  } else if (doneForm?.children.length === 0) {
+    doneDiv.remove();
+  }
+  if (document.getElementById("doneButton")) {
+    if (state.itemList.every((input) => input.userCheck === false)) {
+      const doneButton = document.getElementById("doneButton");
+      const addButton = document.getElementById("addButton");
+      const input = document.getElementById("input");
+      addButton.value = "add";
+      input.placeholder = "write here";
+      inputForm?.removeChild(doneButton);
+    }
   }
 };

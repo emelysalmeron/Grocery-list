@@ -2,6 +2,7 @@ import { state } from "../data.js";
 import { divFormComponent } from "../components/divFormComponent.js";
 import { newItemListComponent } from "../components/newItemListComponent.js";
 import { errorMessage } from "../components/errorMessage.js";
+import { h2title } from "../components/h2Component.js";
 
 export const handlerNewItemList = (event) => {
   const { target } = event; // const target = event.target;
@@ -36,6 +37,8 @@ export const handlerNewItemList = (event) => {
     const rootContainer = document.getElementById("root");
     if (!document.getElementById("listRoot")) {
       rootContainer.after(divFormComponent("listRoot", "list", "event"));
+      const listRoot = document.getElementById("listRoot");
+      listRoot.prepend(h2title("to buy"));
     }
     const formRoot = document.getElementById("listRoot0");
     for (const element of itemList) {
@@ -48,12 +51,15 @@ export const handlerNewItemList = (event) => {
     const checkBox = document.querySelectorAll(".checkbox1");
     for (const element of checkBox) {
       if (
-        element.nextElementSibling.innerHTML === itemList[itemList.length - 1].userInput &&
+        element.nextElementSibling.innerHTML ===
+          itemList[itemList.length - 1].userInput &&
         itemList[itemList.length - 1].doneItem === false
       ) {
-        itemList[itemList.length - 1].userInput = element.nextElementSibling.innerHTML;
+        itemList[itemList.length - 1].userInput =
+          element.nextElementSibling.innerHTML;
         itemList[itemList.length - 1].userCheck = element.checked;
         userInput.value = "";
+        console.log("new Item => ", state);
       }
     }
   }

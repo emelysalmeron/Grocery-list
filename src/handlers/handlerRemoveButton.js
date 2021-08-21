@@ -9,16 +9,16 @@ export const handlerRemoveButton = (event) => {
       if (element.userCheck === true) {
         liList.forEach((liElement) => {
           if (
-            liElement.nextElementSibling.innerHTML === element.userInput &&
-            liElement.checked === true
+            liElement?.nextElementSibling?.innerHTML === element.userInput &&
+            liElement?.checked === true
           ) {
             // update the state
             const index = state.itemList.indexOf(element);
             state.itemList.splice(index, 1);
             // update the DOOM
-            liElement.nextElementSibling.nextElementSibling.remove();
-            liElement.nextElementSibling.remove();
-            liElement.remove();
+            liElement?.nextElementSibling?.nextElementSibling?.remove();
+            liElement?.nextElementSibling?.remove();
+            liElement?.remove();
             console.log("removed log => ", state);
           }
         });
